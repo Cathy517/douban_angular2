@@ -1,0 +1,15 @@
+<div class="list" *ngFor="let ev of eventList" [routerLink]="['/detail',ev.id]">
+    <a class="thumbnail">
+        <div class="content">
+            <img alt="cover" src="{{ev.image}}">
+            <h3>{{ev.title}}</h3>
+            <p>{{ev.content | content}}</p>
+        </div>
+        <div class="author">
+            <span class="name">{{ev.category_name}}</span>
+            <span class="label">
+            本活动来自栏目<span>{{ev.subcategory_name}}</span>
+            </span>
+        </div>
+    </a>
+</div>
